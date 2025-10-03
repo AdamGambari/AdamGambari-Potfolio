@@ -573,7 +573,8 @@ body {
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     z-index: 1000;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, all 0.3s ease;
+    transform: translateY(0);
 }
 
 .nav-container {

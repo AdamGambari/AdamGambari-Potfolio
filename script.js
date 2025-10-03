@@ -36,14 +36,22 @@ window.addEventListener('scroll', () => {
     scrollProgress.style.width = scrollPercent + '%';
 });
 
-// Navbar background change on scroll
+// Navbar hide/show on scroll
+let lastScrollTop = 0;
+const navbar = document.querySelector('.navbar');
+
 window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(10, 10, 10, 0.95)';
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollTop > lastScrollTop && scrollTop > 100) {
+        // Scrolling down - hide navbar
+        navbar.style.transform = 'translateY(-100%)';
     } else {
-        navbar.style.background = 'rgba(10, 10, 10, 0.9)';
+        // Scrolling up - show navbar
+        navbar.style.transform = 'translateY(0)';
     }
+    
+    lastScrollTop = scrollTop;
 });
 
 // Active navigation link highlighting

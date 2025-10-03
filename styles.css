@@ -1562,6 +1562,10 @@ section {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .navbar {
+        border-bottom: none;
+    }
+    
     .hamburger {
         display: flex;
     }
@@ -1631,6 +1635,10 @@ section {
     
     .astronaut {
         font-size: 2.5rem;
+    }
+    
+    .countdown-number {
+        font-size: 3rem;
     }
     
     .about-content {
@@ -1712,6 +1720,10 @@ section {
     
     .astronaut {
         font-size: 1.8rem;
+    }
+    
+    .countdown-number {
+        font-size: 2.2rem;
     }
     
     .footer-content {

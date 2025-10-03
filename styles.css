@@ -1582,18 +1582,39 @@ section {
         left: 0;
     }
     
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 60px 20px 40px;
+    }
+    
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 40px;
+        gap: 25px;
     }
     
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    
+    .name {
+        font-size: 2rem;
     }
     
     .title {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+    
+    .hero-description {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
     }
     
     .hero-buttons {
@@ -1633,8 +1654,31 @@ section {
 }
 
 @media (max-width: 480px) {
+    .hero {
+        padding: 40px 15px 30px;
+    }
+    
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.6rem;
+        margin-bottom: 8px;
+    }
+    
+    .name {
+        font-size: 1.6rem;
+    }
+    
+    .title {
+        font-size: 0.9rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.85rem;
+        margin-bottom: 8px;
+    }
+    
+    .hero-description {
+        font-size: 0.8rem;
+        margin-bottom: 12px;
     }
     
     .section-title {

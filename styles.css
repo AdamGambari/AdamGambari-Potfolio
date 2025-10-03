@@ -569,8 +569,8 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.95);
-    backdrop-filter: blur(20px);
+    background: transparent;
+    backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     z-index: 1000;
     transition: all 0.3s ease;
@@ -1563,6 +1563,7 @@ section {
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
+        background: transparent;
         border-bottom: none;
     }
     

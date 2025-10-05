@@ -30,7 +30,7 @@ export default async function handler(req, res) {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                from: 'Portfolio Contact Form <noreply@adamgambari.com>',
+                from: 'Portfolio Contact Form <onboarding@resend.dev>',
                 to: ['adamgambari@outlook.com'],
                 subject: `Portfolio Contact: ${subject}`,
                 text: `

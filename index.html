@@ -410,45 +410,31 @@
     <script>
         // Resend API configuration
 
-        // Contact form submission function using Resend
+        // Contact form submission function using Formspree (CORS-friendly)
         async function submitContactForm(formData) {
             try {
-                // Using Resend API for email sending
-                const response = await fetch('https://api.resend.com/emails', {
+                // Using Formspree as a CORS-friendly solution
+                const response = await fetch('https://formspree.io/f/xpwnkqkj', {
                     method: 'POST',
                     headers: {
-                        'Authorization': 'Bearer re_QTYRqSPt_B91LzXsdWEWMDgviKyw5rJWb',
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({
-                        from: 'Portfolio Contact Form <noreply@adamgambari.com>',
-                        to: ['adamgambari@outlook.com'],
-                        subject: `Portfolio Contact: ${formData.subject}`,
-                        text: `
-New contact form submission from your portfolio:
-
-Name: ${formData.name}
-Email: ${formData.email}
-Subject: ${formData.subject}
-
-Message:
-${formData.message}
-
----
-This message was sent from your portfolio contact form.
-You can reply directly to this email to respond to ${formData.name}.
-                        `.trim(),
-                        reply_to: formData.email,
+                        name: formData.name,
+                        email: formData.email,
+                        subject: formData.subject,
+                        message: formData.message,
+                        _replyto: formData.email,
+                        _subject: `Portfolio Contact: ${formData.subject}`
                     })
                 });
 
                 if (response.ok) {
-                    const data = await response.json();
-                    console.log('Email sent successfully:', data);
+                    console.log('Email sent successfully via Formspree');
                     return { success: true };
                 } else {
                     const errorData = await response.text();
-                    console.error('Resend API error:', errorData);
+                    console.error('Formspree API error:', errorData);
                     throw new Error('Failed to send email');
                 }
             } catch (error) {

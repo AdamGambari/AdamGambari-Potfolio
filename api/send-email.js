@@ -23,7 +23,7 @@ export default async function handler(req, res) {
         }
 
         // Log the email details for debugging
-        console.log('Sending email to:', 'adamgambari@outlook.com');
+        console.log('Sending email to:', 'adamkgambari@gmail.com');
         console.log('From:', 'onboarding@resend.dev');
         console.log('Subject:', `Portfolio Contact: ${subject}`);
         
@@ -36,7 +36,7 @@ export default async function handler(req, res) {
             },
             body: JSON.stringify({
                 from: 'Portfolio Contact Form <onboarding@resend.dev>',
-                to: ['adamgambari@outlook.com'],
+                to: ['adamkgambari@gmail.com'],
                 subject: `Portfolio Contact: ${subject}`,
                 text: `
 New contact form submission from your portfolio:

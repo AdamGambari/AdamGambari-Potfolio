@@ -22,6 +22,11 @@ export default async function handler(req, res) {
             return res.status(400).json({ error: 'All fields are required' });
         }
 
+        // Log the email details for debugging
+        console.log('Sending email to:', 'adamgambari@outlook.com');
+        console.log('From:', 'onboarding@resend.dev');
+        console.log('Subject:', `Portfolio Contact: ${subject}`);
+        
         // Using Resend API
         const response = await fetch('https://api.resend.com/emails', {
             method: 'POST',
@@ -53,6 +58,7 @@ You can reply directly to this email to respond to ${name}.
 
         if (response.ok) {
             const data = await response.json();
+            console.log('Email sent successfully:', data);
             return res.status(200).json({ 
                 success: true, 
                 message: 'Email sent successfully',
@@ -61,9 +67,11 @@ You can reply directly to this email to respond to ${name}.
         } else {
             const errorData = await response.text();
             console.error('Resend API error:', errorData);
+            console.error('Response status:', response.status);
             return res.status(500).json({ 
                 error: 'Failed to send email',
-                details: errorData 
+                details: errorData,
+                status: response.status
             });
         }
 

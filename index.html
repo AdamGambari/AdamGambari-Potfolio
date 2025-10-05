@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam Gambari - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.skypack.dev/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="milky-way"></div>
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="nebula"></div>
+        <div class="asteroid-belt">
+            <div class="asteroid"></div>
+            <div class="asteroid"></div>
+            <div class="asteroid"></div>
+            <div class="asteroid"></div>
+            <div class="asteroid"></div>
+        </div>
+        <div class="planets-container">
+            <div class="planet earth"></div>
+            <div class="planet mars"></div>
+            <div class="planet jupiter"></div>
+            <div class="planet saturn"></div>
+            <div class="planet moon"></div>
+        </div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="shooting-star"></div>
+        <div class="comet"></div>
+        <div class="clouds"></div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="name">Adam Gambari</span>
+                    <span class="title">Software Developer</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Building innovative solutions through code
+                </p>
+                <p class="hero-description">
+                    Passionate about creating real-world applications that solve problems 
+                    and delight users. Always learning, always building.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    <a href="#" class="btn btn-resume" download="Adam_Gambari_Resume.pdf">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="astronaut-container">
+                    <div class="astronaut">🚀</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Hello, I'm Adam! 👋</h3>
+                    <p>
+                        I'm a passionate Software Developer studying Computer Science at Carleton University. 
+                        My journey in technology began with curiosity and has evolved into creating real-world 
+                        applications that solve problems and make a difference.
+                    </p>
+                    <p>
+                        I love building projects that matter, exploring cutting-edge technologies, 
+                        and constantly pushing the boundaries of what's possible with code. 
+                        When I'm not developing, you can find me learning new frameworks, 
+                        contributing to open source projects, or working on innovative solutions.
+                    </p>
+                    
+                    <div class="skills">
+                        <h4>Technologies I'm exploring:</h4>
+                        <div class="skill-bars">
+                            <div class="skill-item">
+                                <div class="skill-name">JavaScript</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85"></div>
+                                </div>
+                                <div class="skill-percentage">85%</div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">Python</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80"></div>
+                                </div>
+                                <div class="skill-percentage">80%</div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">React</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="75"></div>
+                                </div>
+                                <div class="skill-percentage">75%</div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">Java</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="70"></div>
+                                </div>
+                                <div class="skill-percentage">70%</div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">C++</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="65"></div>
+                                </div>
+                                <div class="skill-percentage">65%</div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">Node.js</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="60"></div>
+                                </div>
+                                <div class="skill-percentage">60%</div>
+                            </div>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">HTML/CSS</span>
+                            <span class="skill-tag">Algorithms</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">Projects Built</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">Projects to Build</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Passion for Code</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Projects</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Here are some of the projects I've been working on</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-preview">
+                            <img src="https://smartpantry-rouge.vercel.app/api/og" alt="Smart Pantry Preview" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="project-placeholder" style="display: none;">
+                                <i class="fas fa-shopping-basket"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <i class="fas fa-shopping-basket"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Smart Pantry</h3>
+                        <p class="project-description">
+                            An AI-powered pantry management system that helps families track food inventory, 
+                            generate meal suggestions, and create smart shopping lists. Features receipt scanning, 
+                            expiration alerts, and intelligent meal planning with OpenAI integration.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Supabase</span>
+                            <span class="tech-tag">OpenAI</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://smartpantry-rouge.vercel.app/" class="project-link" target="_blank" rel="noopener">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/AdamGambari/SmartPantry" class="project-link" target="_blank" rel="noopener">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-preview">
+                            <img src="https://airsense.vercel.app/api/og" alt="Air Sense Preview" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="project-placeholder" style="display: none;">
+                                <i class="fas fa-wind"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <i class="fas fa-wind"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Air Sense</h3>
+                        <p class="project-description">
+                            A real-time air quality monitoring dashboard with interactive maps, 
+                            data visualization, and alert systems. Features WebSocket connections, 
+                            MQTT integration for IoT sensors, and comprehensive analytics for 
+                            environmental data tracking.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">WebSocket</span>
+                            <span class="tech-tag">MQTT</span>
+                            <span class="tech-tag">Chart.js</span>
+                            <span class="tech-tag">Leaflet</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://airsense.vercel.app/" class="project-link" target="_blank" rel="noopener">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/AdamGambari/AirSense" class="project-link" target="_blank" rel="noopener">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Let's connect and create something amazing together!</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>adamgambari@outlook.com</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h3>University</h3>
+                        <p>Carleton University</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Location</h3>
+                        <p>Toronto, Canada</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Adam Gambari</h4>
+                    <p>Software Developer passionate about creating innovative solutions through code.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/AdamGambari" class="social-link" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/adamgambari/" class="social-link" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="mailto:adamgambari@outlook.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Adam Gambari. Built with passion and lots of coffee ☕</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Epic Loading Splash Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="rocket-container">
+                <div class="rocket">🚀</div>
+                <div class="rocket-trail"></div>
+            </div>
+            <div class="countdown-container">
+                <div class="countdown-text">LAUNCH SEQUENCE INITIATED</div>
+                <div class="countdown-number" id="countdown">3</div>
+                <div class="loading-text">Entering Adam's Universe...</div>
+            </div>
+            <div class="loading-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="loading-percentage">0%</div>
+            </div>
+        </div>
+        <div class="loading-stars"></div>
+    </div>
+
+    <script>
+        // Resend API configuration
+
+        // Contact form submission function using Resend
+        async function submitContactForm(formData) {
+            try {
+                // Using Resend API for email sending
+                const response = await fetch('https://api.resend.com/emails', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': 'Bearer re_QTYRqSPt_B91LzXsdWEWMDgviKyw5rJWb',
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        from: 'Portfolio Contact Form <noreply@adamgambari.com>',
+                        to: ['adamgambari@outlook.com'],
+                        subject: `Portfolio Contact: ${formData.subject}`,
+                        text: `
+New contact form submission from your portfolio:
+
+Name: ${formData.name}
+Email: ${formData.email}
+Subject: ${formData.subject}
+
+Message:
+${formData.message}
+
+---
+This message was sent from your portfolio contact form.
+You can reply directly to this email to respond to ${formData.name}.
+                        `.trim(),
+                        reply_to: formData.email,
+                    })
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    console.log('Email sent successfully:', data);
+                    return { success: true };
+                } else {
+                    const errorData = await response.text();
+                    console.error('Resend API error:', errorData);
+                    throw new Error('Failed to send email');
+                }
+            } catch (error) {
+                console.error('Error submitting form:', error);
+                return { success: false, error: error.message };
+            }
+        }
+
+        // Make function available globally
+        window.submitContactForm = submitContactForm;
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
